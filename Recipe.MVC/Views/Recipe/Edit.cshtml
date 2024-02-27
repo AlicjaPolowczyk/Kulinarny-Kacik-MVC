@@ -1,0 +1,77 @@
+﻿@using Recipe.Application.Step.Commands.CreateStep
+@model Recipe.Application.Recipe.Commands.EditRecipe.EditRecipeCommand
+
+@{
+    ViewData["Title"] = "Edycja";
+}
+
+
+<div class="row form-edition shadow p-3 mb-5 rounded">
+    <h1 style="padding-top: 10px;">Edycja przepisu</h1>
+
+    <hr />
+    <div class="col-md-6">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="padding-top: 10px;">
+                <label asp-for="Title" class="control-label">Nazwa przepisu</label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PreparationTime" class="control-label">Czas przygotowania</label>
+                <input asp-for="PreparationTime" class="form-control" />
+                <span asp-validation-for="PreparationTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BakingTime" class="control-label">Czas pieczenia</label>
+                <input asp-for="BakingTime" class="form-control" />
+                <span asp-validation-for="BakingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberOfServings" class="control-label">Liczba porcji</label>
+                <input asp-for="NumberOfServings" class="form-control" />
+                <span asp-validation-for="NumberOfServings" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredients" class="control-label">Składniki</label>
+                <textarea asp-for="Ingredients" class="form-control" style="min-height: 200px;"></textarea>
+                <span asp-validation-for="Ingredients" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="EncodedTitle" class="form-control" type="hidden"/>
+            </div>
+            <div class="form-group">
+                <input asp-for="ImagePath" class="form-control" type="hidden"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Photo" class="control-label">Zdjęcie</label>
+                <input asp-for="Photo" class="form-control" />
+                <span asp-validation-for="Photo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Author" class="control-label">Autor</label>
+                <input asp-for="Author" class="form-control" />
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Zapisz" class="btn btn-primary btn-edit" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<hr />
+<div>
+    <partial name="_CreateStep" model="new CreateStepCommand(){RecipeEncodedTitle=@Model.EncodedTitle!}"/>
+    
+</div>
+
+
+<div id="steps" data-recipe-encoded-title="@Model.EncodedTitle"></div>
+<a class ="btn" style="background-color: rgb(196, 139, 14); color: white;" asp-action="Index">
+    Powrót</a>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/js/Recipe/Edit.js"></script>
+}

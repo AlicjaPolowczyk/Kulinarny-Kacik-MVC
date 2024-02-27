@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Recipe.Application.Recipe.RecipeDto>
+
+@{
+    ViewData["Title"] = "Przepisy";
+}
+
+
+
+<p class="add-recipe-button">
+    <a class="btn" style="background-color: rgb(196, 139, 14); color: white; margin-top:20px; margin-bottom:30px;" asp-action="CreateRecipe">Dodaj swój Przepis</a>
+</p>
+
+
+<div class="row cards shadow p-3 mb-5">
+    <h1 style="text-align: center; padding-top: 30px; font-weight:bold;">Przepisy</h1>
+    <p style="text-align: center;">****************</p>
+@foreach (var item in Model) {
+    <div class="card" style="width: 38rem;">
+        <img src="~/images/@Html.DisplayFor(modelItem => item.ImagePath)" style="width:100%;"alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@item.Title</h5>
+                <div>Czas przygotowania: @item.PreparationTime</div>
+                <div>Czas pieczenia: @item.BakingTime</div>
+                <div>Liczba porcji:@item.NumberOfServings </div>
+                <div>Autor: @item.Author </div>
+                <br />
+
+            @if(item.IsEditable)
+                {
+
+                    <a class="btn btn-outline-danger deleteButtonClass" data-encoded-title="@item.EncodedTitle">Usuń</a>
+                <a class="btn btn-outline-secondary" asp-controller="Recipe" asp-action="Edit" asp-route-encodedTitle="@item.EncodedTitle">Edycja</a>
+                }
+                <a class="btn btn-outline-warning" asp-controller="Recipe" asp-action="Details" asp-route-encodedTitle="@item.EncodedTitle">Szczegóły</a>
+                
+        </div>
+    </div>
+}
+</div>
+
+@section Scripts{
+    <script src="~/js/Recipe/Del.js"></script>
+}

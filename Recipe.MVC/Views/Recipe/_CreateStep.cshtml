@@ -1,0 +1,40 @@
+﻿@model Recipe.Application.Step.Commands.CreateStep.CreateStepCommand
+
+<!-- Button trigger modal -->
+<div style="display: flex; justify-content: center;">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createStepModal">
+    Dodaj krok przygotowania
+</button>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="createStepModal" tabindex="-1" aria-labelledby="createStepModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="CreateStep"enctype="multipart/form-data">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="createStepModalLabel">Tworzenie</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <div class="form-group">
+                <input asp-for="RecipeEncodedTitle" class="form-control" type="hidden" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Opis</label>
+                        <textarea asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Photo" class="control-label">Zdjęcie</label>
+                <input asp-for="Photo" class="form-control" />
+                <span asp-validation-for="Photo" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+                <input type="submit" value="Stwórz" class="btn btn-primary submit" data-recipe-encoded-title="@Model.RecipeEncodedTitle" />
+            </div>
+            </form>
+        </div>
+    </div>
+</div>

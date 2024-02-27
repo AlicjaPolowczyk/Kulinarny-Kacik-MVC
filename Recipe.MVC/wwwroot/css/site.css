@@ -1,0 +1,159 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.photo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.background {
+    background: rgb(243, 224, 166);
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    padding: 17px;
+    margin-top: 10px;
+}
+
+.photo img {
+    margin: 5px;
+    width: 100%;
+    border: 8px solid rgb(243, 224, 166);
+}
+.first-item {
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 40%;
+}
+
+.second-item {
+    white-space: pre-line;
+    font-size:1.1rem;
+}
+
+.element {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.element-ingredients {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+
+.step {
+    width: 30%;
+    background: rgb(243, 224, 166);
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-right: 12px;
+}
+
+.title-step{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+img {
+    width: 100%;
+}
+
+#steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.description-step {
+    margin-top: 5px;
+    padding-top: 5px;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(255, 247, 221);
+}
+
+.user {
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.opinion{
+    font-style: italic;
+    font-size: 0.8rem;
+    padding-left: 6px;
+}
+
+.button-powrot {
+    margin-top: 30px;
+}
+
+.btn-edit{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.form-edition {
+    background: rgb(243, 224, 166);
+}
+
+.form-create {
+    background: rgb(243, 224, 166);
+}
+
+.cards {
+    background: rgb(243, 224, 166);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card {
+    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding-left:0px;
+    padding-right: 0px;
+    border: solid 1px rgba(27, 25, 25, 0.6);
+
+}
+
+.add-recipe-button{
+    display: flex;
+    justify-content: center;
+
+}

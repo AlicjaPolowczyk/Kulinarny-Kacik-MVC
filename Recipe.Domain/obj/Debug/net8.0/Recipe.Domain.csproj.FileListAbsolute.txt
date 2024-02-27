@@ -1,0 +1,12 @@
+C:\Users\alicj\Desktop\Project\Recipe.Domain\bin\Debug\net8.0\Recipe.Domain.deps.json
+C:\Users\alicj\Desktop\Project\Recipe.Domain\bin\Debug\net8.0\Recipe.Domain.dll
+C:\Users\alicj\Desktop\Project\Recipe.Domain\bin\Debug\net8.0\Recipe.Domain.pdb
+C:\Users\alicj\Desktop\Project\Recipe.Domain\obj\Debug\net8.0\Recipe.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alicj\Desktop\Project\Recipe.Domain\obj\Debug\net8.0\Recipe.Domain.AssemblyInfoInputs.cache
+C:\Users\alicj\Desktop\Project\Recipe.Domain\obj\Debug\net8.0\Recipe.Domain.AssemblyInfo.cs
+C:\Users\alicj\Desktop\Project\Recipe.Domain\obj\Debug\net8.0\Recipe.Domain.csproj.CoreCompileInputs.cache
+C:\Users\alicj\Desktop\Project\Recipe.Domain\obj\Debug\net8.0\Recipe.Domain.dll
+C:\Users\alicj\Desktop\Project\Recipe.Domain\obj\Debug\net8.0\refint\Recipe.Domain.dll
+C:\Users\alicj\Desktop\Project\Recipe.Domain\obj\Debug\net8.0\Recipe.Domain.pdb
+C:\Users\alicj\Desktop\Project\Recipe.Domain\obj\Debug\net8.0\ref\Recipe.Domain.dll
+C:\Users\alicj\Desktop\Project\Recipe.Domain\obj\Debug\net8.0\Recipe.Domain.csproj.AssemblyReference.cache

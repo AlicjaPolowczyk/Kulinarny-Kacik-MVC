@@ -1,0 +1,64 @@
+﻿@model Recipe.Application.Recipe.Commands.CreateRecipe.CreateRecipeCommand
+
+@{
+    ViewData["Title"] = "Dodaj Przepis";
+}
+
+
+
+<div class="row form-create shadow p-3 mb-5 rounded">
+    <h1 style="padding-top: 10px;">Stwórz przepis</h1>
+    <hr />
+    <div class="col-md-4">
+        <form asp-action="CreateRecipe" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label">Nazwa przepisu</label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PreparationTime" class="control-label">Czas przygotowania</label>
+                <input asp-for="PreparationTime" class="form-control" />
+                <span asp-validation-for="PreparationTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BakingTime" class="control-label">Czas pieczenia</label>
+                <input asp-for="BakingTime" class="form-control" />
+                <span asp-validation-for="BakingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberOfServings" class="control-label">Liczba porcji</label>
+                <input asp-for="NumberOfServings" class="form-control" />
+                <span asp-validation-for="NumberOfServings" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredients" class="control-label">Składniki</label>
+                <textarea asp-for="Ingredients" class="form-control" style="min-height: 200px;"></textarea>
+                <span asp-validation-for="Ingredients" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Photo" class="control-label">Zdjęcie</label>
+                <input asp-for="Photo" class="form-control" />
+                <span asp-validation-for="Photo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Author" class="control-label">Autor</label>
+                <input asp-for="Author" class="form-control" />
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Stwórz" class="btn btn-primary" style="margin-top: 14px;"/>
+            </div>
+        </form>
+    </div>
+    <div style="margin-top: 10px"> 
+        <a class="btn" style="background-color: rgb(196, 139, 14); color: white;" asp-action="Index">Powrót</a>
+    </div>
+
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

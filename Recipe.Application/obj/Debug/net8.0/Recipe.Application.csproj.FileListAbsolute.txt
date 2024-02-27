@@ -1,0 +1,15 @@
+C:\Users\alicj\Desktop\Project\Recipe.Application\bin\Debug\net8.0\Recipe.Application.deps.json
+C:\Users\alicj\Desktop\Project\Recipe.Application\bin\Debug\net8.0\Recipe.Application.dll
+C:\Users\alicj\Desktop\Project\Recipe.Application\bin\Debug\net8.0\Recipe.Application.pdb
+C:\Users\alicj\Desktop\Project\Recipe.Application\bin\Debug\net8.0\Recipe.Domain.dll
+C:\Users\alicj\Desktop\Project\Recipe.Application\bin\Debug\net8.0\Recipe.Domain.pdb
+C:\Users\alicj\Desktop\Project\Recipe.Application\obj\Debug\net8.0\Recipe.Application.csproj.AssemblyReference.cache
+C:\Users\alicj\Desktop\Project\Recipe.Application\obj\Debug\net8.0\Recipe.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alicj\Desktop\Project\Recipe.Application\obj\Debug\net8.0\Recipe.Application.AssemblyInfoInputs.cache
+C:\Users\alicj\Desktop\Project\Recipe.Application\obj\Debug\net8.0\Recipe.Application.AssemblyInfo.cs
+C:\Users\alicj\Desktop\Project\Recipe.Application\obj\Debug\net8.0\Recipe.Application.csproj.CoreCompileInputs.cache
+C:\Users\alicj\Desktop\Project\Recipe.Application\obj\Debug\net8.0\Recipe.Application.csproj.CopyComplete
+C:\Users\alicj\Desktop\Project\Recipe.Application\obj\Debug\net8.0\Recipe.Application.dll
+C:\Users\alicj\Desktop\Project\Recipe.Application\obj\Debug\net8.0\refint\Recipe.Application.dll
+C:\Users\alicj\Desktop\Project\Recipe.Application\obj\Debug\net8.0\Recipe.Application.pdb
+C:\Users\alicj\Desktop\Project\Recipe.Application\obj\Debug\net8.0\ref\Recipe.Application.dll

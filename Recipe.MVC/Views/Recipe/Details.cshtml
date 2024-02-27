@@ -1,0 +1,74 @@
+﻿@using Recipe.Application.Comment.Commands.CreateComment
+@model Recipe.Application.Recipe.RecipeDto
+
+@{
+    ViewData["Title"] = "Szczegóły";
+}
+
+
+
+<div class=" photo">
+    
+    <img src="~/images/@Html.DisplayFor(model=>model.ImagePath)" class="card-img-top" alt="...">
+    </div>
+
+<div class="background description shadow p-3 mb-5 rounded">
+    <h1>@Model.Title</h1>
+    <hr />
+    <div class="information">
+        <div class="element">
+            <p class="first-item">Czas przygotowania: </p>
+            <p class="second-item">@Html.DisplayFor(model => model.PreparationTime)</p>
+        </div>
+        <div class="element">
+            <p class="first-item">Czas pieczenia: </p>
+            <p class="second-item">@Html.DisplayFor(model => model.BakingTime)</p>
+        </div>
+        <div class="element">
+            <p class="first-item">Liczba sztuk: </p>
+            <p class="second-item">@Html.DisplayFor(model => model.NumberOfServings)</p>
+        </div>        
+        <div class="element">
+            <p class="first-item">Autor: </p>
+            <p class="second-item">@Html.DisplayFor(model => model.Author)</p>
+        </div>
+    </div>
+</div>
+<div class="background ingredients shadow p-3 mb-5 rounded">
+        <div class="element-ingredients">
+            <p class="first-item">Składniki: </p>
+            <div class="second-item">@Html.DisplayFor(model => model.Ingredients)</div>
+        </div>
+    </div>
+
+
+
+<br />
+<h1>Kroki przygotownia</h1>
+<hr />
+<div id="steps" data-recipe-encoded-title="@Model.EncodedTitle"></div>
+
+
+
+    <h1 style="margin-top:20px;">Sekcja komentarzy</h1>
+<hr />
+@if (User.Identity!.IsAuthenticated && User != null)
+{
+    <div>
+        <p>Dodaj komentarz jako: @User.Identity.Name</p>
+        <partial name="_CreateComment" model="new CreateCommentCommand(){RecipeEncodedTitle=@Model.EncodedTitle!}" />
+    </div>
+}
+<div id="allComments" data-recipe-encoded-title="@Model.EncodedTitle"></div>
+
+<div class="button-powrot">
+    <a class="btn" style="background-color: rgb(196, 139, 14); color: white;" asp-controller="Recipe" asp-action="Index">Powrót</a>
+</div>
+@section Scripts
+{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="~/js/Recipe/Details.js"></script>
+    <script src="~/js/Comment/Create.js"></script>
+}
